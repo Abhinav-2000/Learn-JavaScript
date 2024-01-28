@@ -12,7 +12,7 @@ const dc_heroes = ["Batman", "SuperMan", "Flash"]
 
 const allHeroes = [...marvel_heroes, ...dc_heroes]
 console.log(allHeroes);
-
+ 
 const anotherArray = [1,2,3,[4,5,6],7,[8,9,[10,11]]]
 const anotherArray2 = anotherArray.flat(Infinity)
 console.log(anotherArray2);
