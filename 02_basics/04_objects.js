@@ -37,3 +37,17 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+/* ************************************************************* */
+
+const course = {
+    courseName : "C in Depth",
+    courseFee : 999,
+    courseInstructor : "Abhinav Aditya"
+}
+
+console.log(course.courseInstructor);   // better to use the below method
+
+const {courseName : cName, courseFee : cFee} = course       // syntax => const {} = course  // put properties in curly braces to access them directly
+console.log(cName);
+console.log(cFee);
