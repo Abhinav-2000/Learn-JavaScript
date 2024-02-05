@@ -10,6 +10,8 @@ console.log(balance.toFixed(1));
 const otherNumber = 112.833
 console.log(otherNumber.toPrecision(4));
 
+// tofixed() is used for fixed point notation with a specified no fo digits after decimal while toprecision() is used for both fixed point notation as well as exponential notation.
+
 const anotherNUmber = 10000000000
 console.log(anotherNUmber.toLocaleString('en-IN'));
 
