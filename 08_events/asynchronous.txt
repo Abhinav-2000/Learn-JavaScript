@@ -1,0 +1,40 @@
+Javascript  (by default)
+    -> synchronous
+    -> single threaded 
+
+Execution context
+    -> executes single line of code at a time
+    |
+    |
+    | -> console log 1
+    |
+    | -> console log 2          (Call stack, Memory Heap)
+    ^
+
+Each operation waits for the last one to complete before executing.
+
+
+Blocking code           Vs                  Non Blocking code
+    |                                               |
+    |                                               |
+    -> Block the flow of program                    -> Doesn't block the Execution
+    -> Read file Sync                               -> Read file Async
+
+
+
+
+    JS Engine                                       Web API
+--------------------|                               -> DOM
+|   Memory    Call  |                               -> setTimeout       ------------|
+|   Heap     Stack  |                               -> setInterval                  |
+|                   |       Call                    -> fetch()                      |
+|                   |____________________>                                      Register Call Box
+|                   |                                                               |
+|               ^    |                                                               |
+|               |    |                                                               |
+----------------|----                                                                |
+                |                                                                |------------------------|
+                |----------------------------------------------------------------|    Task Queue          |
+                                                                                 |                        |
+                                                                                 |------------------------|
+                                                                                
