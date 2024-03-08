@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learn Javascript</h1>
+    <button id = "stop">Stop</button>
+</body>
+
+<script>
+    // setTimeout(function(){
+    //     console.log("Abhinav Aditya")
+    // },3000)                              // print single time only
+
+    // setInterval(function(){
+    //     console.log("Abhinav");
+    // },2000)                          // keeps on printing on given interval
+
+    const textChange = function(){
+        document.querySelector('h1').innerHTML = "One of the best JavaScript Series"
+    }
+
+    const changeMe = setTimeout(textChange,3000);
+
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("Text change stopped");
+    });
+</script>
+</html>
